@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Book 1",
+      "writer": "Writer 1",
+      "price": 100000
+    },
+    {
+      "id": 2,
+      "title": "Book 2",
+      "writer": "Writer 2",
+      "price": 80000
+    },
+    {
+      "id": 3,
+      "title": "Book 3",
+      "writer": "Writer 3",
+      "price": 75000
+    },
+    {
+      "title": "Harry Potter",
+      "writer": "J. K. Rowling",
+      "price": 400000,
+      "id": 4
+    }
+  ]
+}

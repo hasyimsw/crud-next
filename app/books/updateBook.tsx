@@ -1,5 +1,5 @@
 "use client"
-import { FiEdit } from "react-icons/fi";
+import { FiEdit, FiSave, FiX } from "react-icons/fi";
 import { useState, SyntheticEvent } from "react";
 import { useRouter } from "next/navigation";
 
@@ -54,7 +54,7 @@ export default function UpdateBook(book: Book) {
 
             <div className="modal">
                 <div className="modal-box">
-                    <h3 className="font-semibold text-lg">Edit Book {book.title}</h3>
+                    <h3 className="font-semibold text-base mb-4">Edit Book {book.title}</h3>
                     <form onSubmit={handleUpdate}>
                         <div className="form-control">
                             <label className="label font-semibold">Title</label>
@@ -69,11 +69,11 @@ export default function UpdateBook(book: Book) {
                             <input type="number" value={price} onChange={(e) => setPrice(Number(e.target.value))} className="input w-full input-bordered" placeholder="Price" required />
                         </div>
                         <div className="modal-action">
-                            <button type="button" className="btn" onClick={handleChange}>Close</button>
+                            <button type="button" className="py-2 px-4 rounded-md bg-red-500 hover:bg-red-600 text-white" onClick={handleChange}><FiX /></button>
                             {!isMutating ? (
-                                <button type="submit" className="btn btn-primary">Update</button>
+                                <button type="submit" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white"><FiSave /></button>
                             ) : (
-                                <button type="button" className="btn loading">Updating...</button>
+                                <button type="button" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white text-sm">Updating...</button>
                             )}
                         </div>
                     </form>

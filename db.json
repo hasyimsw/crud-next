@@ -21,8 +21,20 @@
     {
       "title": "Harry Potter",
       "writer": "J. K. Rowling",
-      "price": 400000,
+      "price": 200000,
       "id": 4
+    },
+    {
+      "title": "test",
+      "writer": "test",
+      "price": "10000",
+      "id": 7
+    },
+    {
+      "title": "hghgh",
+      "writer": "hghg",
+      "price": 8978,
+      "id": 8
     }
   ]
 }

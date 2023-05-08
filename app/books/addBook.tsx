@@ -1,5 +1,5 @@
 "use client"
-import { FiBookOpen } from "react-icons/fi";
+import { FiBookOpen, FiSave, FiX } from "react-icons/fi";
 import { useState, SyntheticEvent } from "react";
 import { useRouter } from "next/navigation";
 
@@ -23,7 +23,7 @@ export default function AddBook() {
             body: JSON.stringify({
                 title: title,
                 writer: writer,
-                price: price
+                price: Number(price),
             })
         });
 
@@ -49,26 +49,26 @@ export default function AddBook() {
 
             <div className="modal">
                 <div className="modal-box">
-                    <h3 className="font-semibold text-lg">Add New Book</h3>
+                    <h3 className="font-semibold text-base mb-4">Add New Book</h3>
                     <form onSubmit={handleSubmit}>
                         <div className="form-control">
                             <label className="label font-semibold">Title</label>
-                            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="input w-full input-bordered" placeholder="Book Name" required />
+                            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="w-full p-2 rounded-md border-2 border-teal-500 outline-none" placeholder="Book Name" required />
                         </div>
                         <div className="form-control">
                             <label className="label font-semibold">Writer</label>
-                            <input type="text" value={writer} onChange={(e) => setWriter(e.target.value)} className="input w-full input-bordered" placeholder="Writer Name" required />
+                            <input type="text" value={writer} onChange={(e) => setWriter(e.target.value)} className="w-full p-2 rounded-md border-2 border-teal-500 outline-none" placeholder="Writer Name" required />
                         </div>
                         <div className="form-control">
                             <label className="label font-semibold">Price</label>
-                            <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} className="input w-full input-bordered" placeholder="Price" required />
+                            <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} className="w-full p-2 rounded-md border-2 border-teal-500 outline-none" placeholder="Price" required />
                         </div>
                         <div className="modal-action">
-                            <button type="button" className="btn" onClick={handleChange}>Close</button>
+                            <button type="button" className="py-2 px-4 rounded-md bg-red-500 hover:bg-red-600 text-white" onClick={handleChange}><FiX /></button>
                             {!isMutating ? (
-                                <button type="submit" className="btn btn-primary">Save</button>
+                                <button type="submit" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white"><FiSave /></button>
                             ) : (
-                                <button type="button" className="btn loading">Saving...</button>
+                                <button type="button" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white text-sm">Saving...</button>
                             )}
                         </div>
                     </form>

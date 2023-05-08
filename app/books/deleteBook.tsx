@@ -1,5 +1,5 @@
 "use client"
-import { FiTrash2 } from "react-icons/fi";
+import { FiTrash2, FiCheck, FiX } from "react-icons/fi";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -39,13 +39,13 @@ export default function DeleteBook(book: Book) {
 
             <div className="modal">
                 <div className="modal-box">
-                    <h3 className="font-semibold text-lg">Are you sure to delete {book.title}?</h3>
+                    <h3 className="font-semibold text-base mb-4">Are you sure to delete {book.title}?</h3>
                     <div className="modal-action">
-                        <button type="button" className="btn" onClick={handleChange}>Close</button>
+                        <button type="button" className="py-2 px-4 rounded-md bg-red-500 hover:bg-red-600 text-white" onClick={handleChange}><FiX /></button>
                         {!isMutating ? (
-                            <button type="button" onClick={() => handleDelete(book.id)} className="btn btn-primary">Delete</button>
+                            <button type="button" onClick={() => handleDelete(book.id)} className="py-2 px-4 rounded-md bg-teal-500 hover:bg-teal-600 text-white"><FiCheck /></button>
                         ) : (
-                            <button type="button" className="btn loading">Deleting...</button>
+                            <button type="button" className="py-2 px-4 rounded-md bg-teal-500 text-white text-sm">Deleting...</button>
                         )}
                     </div>
                 </div>

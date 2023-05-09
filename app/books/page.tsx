@@ -15,7 +15,7 @@ type Book = {
 
 async function getBooks() {
     const res = await fetch('http://localhost:5000/books', {
-        cache: "no-store",
+        cache: 'no-store',
     });
     return res.json();
 }
@@ -45,7 +45,7 @@ export default async function BookList() {
                             <td>{index + 1}</td>
                             <td>{book.title}</td>
                             <td>{book.writer}</td>
-                            <td>{book.price}</td>
+                            <td>RP. {book.price.toLocaleString("id-ID", { currency: "IDR" })}</td>
                             <td className="flex justify-center gap-x-2">
                                 <UpdateBook {...book} />
                                 <DeleteBook {...book} />

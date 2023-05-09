@@ -42,11 +42,8 @@ export default function AddBook() {
 
     return (
         <div>
-
-            <button className="py-2 px-4 rounded-md bg-teal-500 hover:bg-teal-600 text-white text-sm inline-flex items-center gap-x-2" onClick={handleChange}><FiBookOpen />New Book</button>
-
+            <button className="py-2 px-4 rounded-md bg-teal-500 hover:bg-teal-600 text-white shadow-md text-sm inline-flex items-center gap-x-2" onClick={handleChange}><FiBookOpen />New Book</button>
             <input type="checkbox" checked={modal} onChange={handleChange} className="modal-toggle" />
-
             <div className="modal">
                 <div className="modal-box">
                     <h3 className="font-semibold text-base mb-4">Add New Book</h3>
@@ -64,11 +61,11 @@ export default function AddBook() {
                             <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} className="w-full p-2 rounded-md border-2 border-teal-500 outline-none" placeholder="Price" required />
                         </div>
                         <div className="modal-action">
-                            <button type="button" className="py-2 px-4 rounded-md bg-red-500 hover:bg-red-600 text-white" onClick={handleChange}><FiX /></button>
+                            <button type="button" className="py-2 px-4 rounded-md bg-red-500 hover:bg-red-600 text-white shadow-md" onClick={handleChange}><FiX /></button>
                             {!isMutating ? (
-                                <button type="submit" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white"><FiSave /></button>
+                                <button type="submit" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white shadow-md"><FiSave /></button>
                             ) : (
-                                <button type="button" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white text-sm">Saving...</button>
+                                <button type="button" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white shadow-md text-sm">Saving...</button>
                             )}
                         </div>
                     </form>

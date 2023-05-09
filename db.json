@@ -1,40 +1,22 @@
 {
   "books": [
     {
-      "id": 1,
-      "title": "Book 1",
-      "writer": "Writer 1",
-      "price": 100000
-    },
-    {
-      "id": 2,
-      "title": "Book 2",
-      "writer": "Writer 2",
-      "price": 80000
-    },
-    {
-      "id": 3,
-      "title": "Book 3",
-      "writer": "Writer 3",
-      "price": 75000
-    },
-    {
       "title": "Harry Potter",
       "writer": "J. K. Rowling",
       "price": 200000,
       "id": 4
     },
     {
-      "title": "test",
-      "writer": "test",
-      "price": "10000",
-      "id": 7
+      "title": "Filosofi Tears",
+      "writer": "Henry Manampiring",
+      "price": 78000,
+      "id": 6
     },
     {
-      "title": "hghgh",
-      "writer": "hghg",
-      "price": 8978,
-      "id": 8
+      "title": "Cantik itu Luka",
+      "writer": "Eka Kurniawan",
+      "price": 142000,
+      "id": 7
     }
   ]
 }

@@ -48,7 +48,7 @@ export default function UpdateBook(book: Book) {
     return (
         <div>
 
-            <button className="py-2 px-4 rounded-md bg-yellow-500 hover:bg-yellow-600 text-white text-sm inline-flex items-center gap-x-2" onClick={handleChange}><FiEdit /></button>
+            <button className="py-2 px-4 rounded-md bg-yellow-500 hover:bg-yellow-600 text-white shadow-md text-sm inline-flex items-center gap-x-2" onClick={handleChange}><FiEdit /></button>
 
             <input type="checkbox" checked={modal} onChange={handleChange} className="modal-toggle" />
 
@@ -69,11 +69,11 @@ export default function UpdateBook(book: Book) {
                             <input type="number" value={price} onChange={(e) => setPrice(Number(e.target.value))} className="input w-full input-bordered" placeholder="Price" required />
                         </div>
                         <div className="modal-action">
-                            <button type="button" className="py-2 px-4 rounded-md bg-red-500 hover:bg-red-600 text-white" onClick={handleChange}><FiX /></button>
+                            <button type="button" className="py-2 px-4 rounded-md bg-red-500 hover:bg-red-600 text-white shadow-md" onClick={handleChange}><FiX /></button>
                             {!isMutating ? (
-                                <button type="submit" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white"><FiSave /></button>
+                                <button type="submit" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white shadow-md"><FiSave /></button>
                             ) : (
-                                <button type="button" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white text-sm">Updating...</button>
+                                <button type="button" className="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-600 text-white shadow-md text-sm">Updating...</button>
                             )}
                         </div>
                     </form>

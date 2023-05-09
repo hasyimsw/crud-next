@@ -58,15 +58,15 @@ export default function UpdateBook(book: Book) {
                     <form onSubmit={handleUpdate}>
                         <div className="form-control">
                             <label className="label font-semibold">Title</label>
-                            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="input w-full input-bordered" placeholder="Book Name" required />
+                            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="w-full p-2 rounded-md border-2 border-teal-500 outline-none" placeholder="Book Name" required />
                         </div>
                         <div className="form-control">
                             <label className="label font-semibold">Writer</label>
-                            <input type="text" value={writer} onChange={(e) => setWriter(e.target.value)} className="input w-full input-bordered" placeholder="Writer Name" required />
+                            <input type="text" value={writer} onChange={(e) => setWriter(e.target.value)} className="w-full p-2 rounded-md border-2 border-teal-500 outline-none" placeholder="Writer Name" required />
                         </div>
                         <div className="form-control">
                             <label className="label font-semibold">Price</label>
-                            <input type="number" value={price} onChange={(e) => setPrice(Number(e.target.value))} className="input w-full input-bordered" placeholder="Price" required />
+                            <input type="number" value={price} onChange={(e) => setPrice(Number(e.target.value))} className="w-full p-2 rounded-md border-2 border-teal-500 outline-none" placeholder="Price" required />
                         </div>
                         <div className="modal-action">
                             <button type="button" className="py-2 px-4 rounded-md bg-red-500 hover:bg-red-600 text-white shadow-md" onClick={handleChange}><FiX /></button>

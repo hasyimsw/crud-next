@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex flex-wrap items-center gap-2 pt-6 pb-10">
           <h1 className="text-2xl md:text-5xl font-semibold">Welcome to my simple project CRUD with NEXT.JS</h1>
         </div>
-        <Link href="/books" className="py-2 px-6 bg-teal-500 hover:bg-teal-600 rounded-md text-white text-lg flex items-center gap-x-2 font-semibold shadow-md">Let's Start <FiArrowRight className="mt-1" /></Link>
+        <Link href="/books" className="py-2 px-6 bg-teal-500 hover:bg-teal-600 rounded-md text-white text-lg flex items-center gap-x-2 font-semibold shadow-md">Let&apos;s Start <FiArrowRight className="mt-1" /></Link>
       </div>
     </div>
   )
